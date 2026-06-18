@@ -13,12 +13,15 @@ export interface AudioTrack {
   isDefault: boolean
 }
 
+export type Rarity = 'R' | 'SR' | 'SSR' | 'UR'
+
 export interface Fact {
   id: string
-  coinCost: number
   title: string
   body: string
   emoji?: string
+  rarity: Rarity
+  pullCost: number
 }
 
 export interface GameState {
