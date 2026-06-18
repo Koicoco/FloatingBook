@@ -1,0 +1,117 @@
+.book-cover-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+}
+
+.book-cover {
+  position: relative;
+  width: 520px;
+  height: 680px;
+  display: flex;
+  filter: drop-shadow(-8px 8px 24px rgba(0,0,0,0.6));
+}
+
+.book-spine {
+  width: 24px;
+  background: #2a1f14;
+  border-radius: 4px 0 0 4px;
+  flex-shrink: 0;
+  box-shadow: inset -3px 0 6px rgba(0,0,0,0.4);
+}
+
+.book-back {
+  width: 248px;
+  background: #3d2b1f;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 2rem;
+  border-radius: 0;
+}
+
+.book-flap {
+  width: 248px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+}
+
+.book-flap-front {
+  position: absolute;
+  inset: 0;
+  background: #5c3d2e;
+  border-radius: 0 8px 8px 0;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.book-flap-back {
+  position: absolute;
+  inset: 0;
+  background: #f5f0e8;
+  border-radius: 0 8px 8px 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.cover-title {
+  font-family: var(--font-body);
+  font-size: 2.8rem;
+  color: #f5e6d3;
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.open-btn {
+  padding: 0.6rem 2rem;
+  background: rgba(245, 230, 211, 0.15);
+  border: 1px solid rgba(245, 230, 211, 0.4);
+  color: #f5e6d3;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.open-btn:hover {
+  background: rgba(245, 230, 211, 0.25);
+  transform: scale(1.04);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+}
+.social-links a {
+  color: rgba(245, 230, 211, 0.6);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+.social-links a:hover { color: #f5e6d3; }
+
+/* Page spread — built next */
+.page-spread-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+}
