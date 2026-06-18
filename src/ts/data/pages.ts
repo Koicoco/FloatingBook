@@ -8,8 +8,9 @@ import ClubsPage from '../../components/Book/pages/ClubsPage'
 import WorkPage from '../../components/Book/pages/WorkPage'
 
 export const bookPages: BookPage[] = [
-  { id: 'cover',     left: BookCover,       right: null },
-  { id: 'toc',       left: InsideCoverPage, right: TocPage },
-  { id: 'education', left: EducationPage,   right: ResearchPage },
-  { id: 'clubs',     left: ClubsPage,       right: WorkPage },
+  // Pass a function that renders the component with its required props
+  { id: 'cover',     left: () => BookCover({ onOpen: () => {} }), right: null },
+  { id: 'toc',       left: InsideCoverPage,                       right: TocPage },
+  { id: 'education', left: EducationPage,                         right: ResearchPage },
+  { id: 'clubs',     left: ClubsPage,                             right: WorkPage },
 ]
