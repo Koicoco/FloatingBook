@@ -1,0 +1,27 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #1a1a2e;
+  --color-page: #f5f0e8;
+  --color-ink: #2c2c2c;
+  --color-accent: #c084fc;
+  --font-body: 'Georgia', serif;
+  --font-ui: 'Inter', sans-serif;
+  --flip-duration: 0.7s;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--color-bg);
+  font-family: var(--font-body);
+  color: var(--color-ink);
+}
